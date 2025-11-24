@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Chart</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <!-- Expense Chart Section -->
+    <div class="expense-chart-card">
+        <div class="card-header">
+            <h3 class="card-title">Expense Breakdown</h3>
+        </div>
+        <div class="card-content">
+            <!-- Canvas for chart (to be rendered by JS/Chart library) -->
+            <canvas id="expenseChart" width="400" height="300"></canvas>
+            
+            <!-- Alternative: Manual chart representation -->
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #3b82f6;"></span>
+                    <span class="legend-label">Food & Dining</span>
+                    <span class="legend-value">35%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #10b981;"></span>
+                    <span class="legend-label">Transportation</span>
+                    <span class="legend-value">20%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #f59e0b;"></span>
+                    <span class="legend-label">Entertainment</span>
+                    <span class="legend-value">25%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #8b5cf6;"></span>
+                    <span class="legend-label">Shopping</span>
+                    <span class="legend-value">15%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #ec4899;"></span>
+                    <span class="legend-label">Others</span>
+                    <span class="legend-value">5%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js or any chart library script -->
+    <script src="../js/chartRenderer.js"></script>
+</body>
+</html>
