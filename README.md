@@ -1,4 +1,3 @@
-````md
 # 📊 Savr – Smart Expense & Budget Tracking (Front-End)
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
@@ -201,7 +200,7 @@ This project is licensed under the MIT License.
 
 ## ⭐ Support
 
-```md
+
 If this project is helpful, please give it a ⭐ to support development.
 ```
 
