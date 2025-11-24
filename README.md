@@ -1,3 +1,4 @@
+````md
 # 📊 Savr – Smart Expense & Budget Tracking (Front-End)
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
@@ -5,55 +6,62 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 🌟 Overview  
-Savr is a responsive, student-friendly budgeting and personal finance application designed to help users track income, expenses, goals, and spending patterns—directly from the browser.  
-Built entirely using **HTML, CSS, and JavaScript**, the platform demonstrates scalable front-end architecture, modular UI design, and future-ready integration points for server-side and AI upgrades.
-
-The solution is engineered to support seamless expansion into a full stack system with persistent data, authentication layers, real-time insights, and intelligent recommendations in future phases.
+Savr is a responsive budgeting and spending tracker designed to help university students monitor and manage their financial activities directly from the browser.  
+Built using **HTML, CSS, and JavaScript**, Savr demonstrates a clean modular front-end architecture and lays the groundwork for future full-stack or AI-powered capabilities.
 
 ---
 
 ## 🧭 Business Value  
-University students often struggle with financial literacy and tracking everyday spending. Savr bridges that gap by offering:
+Many students struggle with daily financial discipline and have limited access to structured money management tools.  
+Savr addresses this by offering:
 
-- A structured and intuitive dashboard to visualize financial health  
-- Fast and offline-friendly expense tracking using browser storage  
-- A clean user experience powered by component-based architecture  
-- A solid foundation for future enterprise-level enhancements
+- A visual, user-friendly dashboard  
+- Quick transaction entry  
+- Goal tracking and spending awareness  
+- Browser-based offline functionality  
+- A clean and scalable component architecture
 
 ---
 
-## 🚀 Core Features
+## 🚀 Features
 
-### 🌐 Multi-Page Experience
-- **Landing Page** – Clear product value and calls to action  
-- **About Us** – Mission, vision, and contributor profiles  
-- **How It Works** – Step-by-step explanation of tracking and analysis  
-- **Register & Login** – Structured authentication forms  
-- **Dashboard**  
-  - Summary cards (Income, Expense, Total Balance)  
-  - Recent transactions  
-  - Budget progress visualization  
-  - Chart placeholders  
-  - Alert banner support  
-- **Add Transaction Page** – Form to submit income and expense details  
-- **Goals Page** – Savings goals, progress tracking, and updates
+### Core Pages
+- **Landing Page (index.html)** – Introduction and CTA  
+- **About Us** – Mission, vision, and contributor listings  
+- **How It Works** – Step-by-step usage explanation  
+- **Login & Registration Forms**  
+- **Dashboard**
+  - Income/Expense summaries
+  - Recent transaction list
+  - Budget tracking progress bars
+  - Chart placeholders
+  - Alert banners
+- **Add Transaction Page**
+  - Type, category, date, amount, and description fields
+- **Goals Page**
+  - Savings targets with progress tracking
 
-### 🧩 Component-Based UI
-Reusable components including:
+### Component-Based UI  
+Reusable components include:
 
 - Header  
 - Footer  
-- Alert Banner  
-- Dashboard widgets (cards, charts, lists, progress)
+- Alert banner  
+- Dashboard widgets  
+  - Summary cards  
+  - Progress bars  
+  - Expense charts  
+  - Transaction list
 
-### 💾 Front-End Data Storage
-- Utilizes `localStorage` for temporary persistence  
-- Modular JavaScript files manage calculation and UI rendering
+### Data Handling  
+- Uses `localStorage` for temporary storage  
+- JavaScript modules manage calculations, rendering, and UI interaction
 
 ---
 
-## 🏗️ System Structure
+## 🏗 Folder Structure
 
+```md
 Frontend
 ├── index.html
 ├── about.html
@@ -64,129 +72,138 @@ Frontend
 ├── add-transaction.html
 ├── goals.html
 ├── css/
-│ ├── style.css
-│ ├── dashboard.css
-│ ├── forms.css
-│ └── responsive.css
+│   ├── style.css
+│   ├── dashboard.css
+│   ├── forms.css
+│   └── responsive.css
 ├── js/
-│ ├── app.js
-│ ├── budgetCalculator.js
-│ ├── chartRenderer.js
-│ ├── uiController.js
-│ └── alertSystem.js
+│   ├── app.js
+│   ├── budgetCalculator.js
+│   ├── chartRenderer.js
+│   ├── uiController.js
+│   └── alertSystem.js
 ├── assets/
-│ ├── icons/
-│ └── images/
+│   ├── icons/
+│   └── images/
 ├── components/
-│ ├── dashboard/
-│ │ ├── summary-cards.html
-│ │ ├── expense-chart.html
-│ │ ├── transaction-list.html
-│ │ └── budget-progress.html
-│ └── ui/
-│ ├── header.html
-│ ├── footer.html
-│ └── alert-banner.html
+│   ├── dashboard/
+│   │   ├── summary-cards.html
+│   │   ├── expense-chart.html
+│   │   ├── transaction-list.html
+│   │   └── budget-progress.html
+│   └── ui/
+│       ├── header.html
+│       ├── footer.html
+│       └── alert-banner.html
 └── lib/
-└── utils.js
-
-
+    └── utils.js
+````
 
 ---
 
-## 🧪 Installation & Setup
+## 🧪 Installation
 
-### ✔ Requirements
-- Any modern web browser (Chrome, Firefox, Edge, Safari)
+```md
+Requires:
+- Any modern web browser
 
-### 📥 Setup Steps
-1. Clone or download the repository:
-   ```bash
-   git clone <repo-link>
-Open the project folder.
+Steps:
+1. Download or clone the repository
+2. Open the project folder
+3. Open `index.html` in a browser
+```
 
-Launch index.html in the browser.
+---
 
-No server or backend required for this phase.
+## ▶️ Running the Application
 
-▶️ How to Run
-
-Simply open:
-
+```md
+Open:
 index.html
 
+Navigation works through HTML links and ES6 modules load scripts automatically.
+```
 
-All navigation works through built HTML links, and scripts load automatically through ES6 modules.
+---
 
-📚 Usage
+## 📚 Usage
 
-Navigate to the Login or Register page to simulate account access
+```md
+- Use Login or Register to simulate onboarding
+- Dashboard displays summaries and financial insights
+- Add Transaction page allows entry of incomes and expenses
+- Goals page helps track savings progress
+- All user data is stored in localStorage
+```
 
-Open the Dashboard to view:
+---
 
-Total balance
+## 📸 Screenshots (Placeholder)
 
-Spending insights
+```md
+[ Dashboard Screenshot ]
+[ Add Transaction Form Screenshot ]
+[ Goals Page Screenshot ]
+```
 
-Recent activity
+Replace with real screenshots when available.
 
-Add income or expense entries through the Add Transaction page
+---
 
-Track long-term objectives via the Goals page
+## 🔮 Future Roadmap
 
-All transaction and goal data is stored temporarily using localStorage
+```md
+- Backend using PHP + MySQL
+- Persistent DB storage
+- Actual user authentication
+- Email alerts for budget limits
+- Dynamic charts using Chart.js
+- Real-time dashboards
+- AI-based spending suggestions
+```
 
-📸 Screenshots (Placeholders)
-[ Dashboard Overview Screenshot ]
-[ Transaction Entry Form Screenshot ]
-[ Goals Tracking Screenshot ]
+---
 
+## 🧑‍🤝‍🧑 Team Members
 
-Replace the placeholders with actual screenshots once available.
+```md
+| Member             | Responsibility                                      |
+|--------------------|-----------------------------------------------------|
+| Lalisa Tamene       | Home page, Header & Footer                          |
+| Leoul Zerihun       | About Us, How It Works pages                        |
+| Meklit Yemane       | Login & Register pages                              |
+| Nebiyu Yalemgeta    | Dashboard                                           |
+| Negasi Berihu       | Add Transaction page                                |
+| Robel Wondwossen    | Goals page and alert banner component               |
+```
 
-🔮 Future Enhancements (Phase II Roadmap)
+---
 
-Backend using PHP + MySQL
+## 🤝 Contributions
 
-Real authentication and session management
+```md
+1. Fork the repository
+2. Create a new feature branch:
+   git checkout -b feature/your-feature
+3. Commit changes and push
+4. Submit a Pull Request
+```
 
-Persistent data storage
+---
 
-Automated email alerts
+## 📄 License
 
-AI-powered spending insights
+```md
+This project is licensed under the MIT License.
+```
 
-Dynamic Chart.js visualizations
+---
 
-Real-time dashboards and notifications
+## ⭐ Support
 
-🧑‍🤝‍🧑 Team Contributions
-Member	Responsibility
-Lalisa Tamene	Home page, Header, Footer
-Leoul Zerihun	About Us, How It Works
-Meklit Yemane	Login & Register pages
-Nebiyu Yalemgeta	Dashboard design
-Negasi Berihu	Add Transaction module
-Robel Wondwossen	Goals page & Alert Banner component
-🤝 Contributing
+```md
+If this project is helpful, please give it a ⭐ to support development.
+```
 
-Fork the repository
-
-Create a new feature branch
-
-git checkout -b feature/your-feature
-
-
-Commit improvements
-
-Open a pull request
-
-Clean, maintainable structure and DRY code practices are encouraged.
-
-📄 License
-
-This project is released under the MIT License.
-
-⭐ Show Your Support
-
-If this project inspires your next innovative solution, drop a ⭐ on the repository!
+```
+```
