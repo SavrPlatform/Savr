@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Banner Component</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="alert-banner alert-destructive">
+        <div class="alert-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+        </div>
+        <div class="alert-content">
+            <h4 class="alert-title">Budget Alert!</h4>
+            <p class="alert-description">
+                You've exceeded your budget in 2 categories: 
+                <strong>Entertainment</strong> ($70.00 over), 
+                <strong>Shopping</strong> ($45.50 over)
+            </p>
+        </div>
+    </div>
+
+    <!-- Alert Banner - Warning  -->
+    <div class="alert-banner alert-warning">
+        <div class="alert-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+        </div>
+        <div class="alert-content">
+            <h4 class="alert-title">Warning</h4>
+            <p class="alert-description">
+                You're approaching your budget limit in Food & Dining category (90% used)
+            </p>
+        </div>
+    </div>
+
+    <!-- Alert Banner - Success  -->
+    <div class="alert-banner alert-success">
+        <div class="alert-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+        <div class="alert-content">
+            <h4 class="alert-title">Success!</h4>
+            <p class="alert-description">
+                Your savings goal has been successfully created.
+            </p>
+        </div>
+    </div>
+
+    <!-- Alert Banner - Info  -->
+    <div class="alert-banner alert-info">
+        <div class="alert-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+        </div>
+        <div class="alert-content">
+            <h4 class="alert-title">Information</h4>
+            <p class="alert-description">
+                Your monthly budget report is ready to view.
+            </p>
+        </div>
+    </div>
+
+    <!-- Alert Banner with Close Button -->
+    <div class="alert-banner alert-warning alert-dismissible">
+        <div class="alert-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+        </div>
+        <div class="alert-content">
+            <h4 class="alert-title">Reminder</h4>
+            <p class="alert-description">
+                Don't forget to log your daily expenses for accurate tracking.
+            </p>
+        </div>
+        <button class="alert-close" aria-label="Close alert">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+
+  
+</body>
+</html>
