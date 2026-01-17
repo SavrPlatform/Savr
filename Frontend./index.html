@@ -1,182 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Savr - Track expenses, set budgets, and visualize your spending with our intelligent expense tracker designed for students.">
-  <title>Savr - Student Budget Tracker</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savr - Student Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-container">
-      <a href="index.html" class="logo">
-        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2z"/>
-          <path d="M2 9v1c0 1.1.9 2 2 2h1"/>
-        </svg>
-        <span class="logo-text">Savr</span>
-      </a>
-      
-      <nav class="nav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="dashboard.html" class="nav-link">Dashboard</a>
-        <a href="goals.html" class="nav-link">Goals</a>
-        <a href="how-it-works.html" class="nav-link">How It Works</a>
-        <a href="about.html" class="nav-link">About</a>
-      </nav>
-      
-      <div class="header-actions">
-        <a href="login.html" class="btn btn-outline">Login</a>
-        <a href="register.html" class="btn btn-primary">Sign Up</a>
-      </div>
-      
-      <button class="mobile-menu-btn" aria-label="Toggle menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container hero-content">
-        <h1 class="hero-title">Take Control of Your Student Budget</h1>
-        <p class="hero-description">
-          Track expenses, set budgets, and visualize your spending with our intelligent expense tracker designed for students.
-        </p>
-        <div class="hero-buttons">
-          <a href="dashboard.html" class="btn btn-primary btn-lg">Go to Dashboard</a>
-          <a href="register.html" class="btn btn-outline btn-lg">Get Started Free</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section">
-      <div class="container">
-        <h2 class="section-title">Why Choose Savr?</h2>
-        <div class="features-grid">
-
-          <article class="feature-card">
-            <div class="feature-icon feature-icon--primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/>
-                <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/>
-                <path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/>
-              </svg>
+    <!-- Header with navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">💰 Savr</a>
             </div>
-            <h3 class="feature-title">Easy Tracking</h3>
-            <p class="feature-description">
-              Add and categorize transactions in seconds. Keep your finances organized effortlessly.
-            </p>
-          </article>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="btn-nav">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
 
-          <article class="feature-card">
-            <div class="feature-icon feature-icon--success">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
-                <path d="M22 12A10 10 0 0 0 12 2v10z"/>
-              </svg>
+    <!-- Main content -->
+    <main>
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Track Your Student Budget</h1>
+                <p>A simple expense tracker built for students. Keep track of your spending, set budgets, and save money for what matters.</p>
+                <div class="hero-buttons">
+                    <a href="dashboard.html" class="btn btn-primary">Go to Dashboard</a>
+                    <a href="register.html" class="btn btn-outline">Get Started Free</a>
+                </div>
             </div>
-            <h3 class="feature-title">Visual Analytics</h3>
-            <p class="feature-description">
-              See where your money goes with beautiful charts and detailed breakdowns.
-            </p>
-          </article>
+        </section>
 
-          <article class="feature-card">
-            <div class="feature-icon feature-icon--accent">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <circle cx="12" cy="12" r="6"/>
-                <circle cx="12" cy="12" r="2"/>
-              </svg>
+        <!-- Features section -->
+        <section class="features">
+            <h2>Why Use Savr?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Easy Tracking</h3>
+                    <p>Add your income and expenses quickly. No complicated forms or confusing categories.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Visual Analytics</h3>
+                    <p>See where your money goes with simple charts and graphs that make sense.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Budget Goals</h3>
+                    <p>Set spending limits for different categories and get alerts when you're close.</p>
+                </div>
             </div>
-            <h3 class="feature-title">Budget Goals</h3>
-            <p class="feature-description">
-              Set spending limits and savings goals. Get alerts when you're close to your budget.
-            </p>
-          </article>
+        </section>
+
+        <!-- Call to action -->
+        <section class="cta">
+            <h2>Ready to Take Control?</h2>
+            <p>Join other students who are already managing their money better.</p>
+            <a href="register.html" class="btn btn-primary">Start Tracking Today</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Savr</h4>
+                <p>A student project for Internet Programming class.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works-section">
-      <div class="container">
-        <h2 class="section-title">Get Started in 3 Simple Steps</h2>
-        <div class="steps-grid">
-
-          <div class="step">
-            <div class="step-number step-number--primary">1</div>
-            <h3 class="step-title">Add Transactions</h3>
-            <p class="step-description">
-              Record your income and expenses with just a few clicks.
-            </p>
-          </div>
-
-          <div class="step">
-            <div class="step-number step-number--success">2</div>
-            <h3 class="step-title">Track Spending</h3>
-            <p class="step-description">
-              Monitor your expenses by category and time period.
-            </p>
-          </div>
-
-          <div class="step">
-            <div class="step-number step-number--accent">3</div>
-            <h3 class="step-title">Analyze & Save</h3>
-            <p class="step-description">
-              Get insights and achieve your financial goals.
-            </p>
-          </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Savr. Made for educational purposes.</p>
         </div>
-        <div class="learn-more-wrapper">
-          <a href="how-it-works.html" class="btn btn-outline">Learn More</a>
-        </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <h2 class="cta-title">Ready to Master Your Finances?</h2>
-        <p class="cta-description">
-          Join students who are already taking control of their budgets with Savr.
-        </p>
-        <a href="register.html" class="btn btn-primary btn-lg">Start Tracking Today</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2z"/>
-          </svg>
-          <span class="logo-text">Savr</span>
-        </a>
-        <p class="footer-tagline">Smart budgeting for students</p>
-      </div>
-      <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
-      <p class="footer-copyright">&copy; 2024 Savr. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="js/app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
