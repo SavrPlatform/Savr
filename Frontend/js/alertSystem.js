@@ -1,84 +1,140 @@
+let alertQueue = [];
+let isShowingAlert = false;
 
-const ALERT_DURATION_DEFAULT = 5000;     
-const ALERT_DURATION_LONG = 8000;        
+function showAlert(message, type = 'info', duration = 5000) {
+    const alert = { message, type, duration };
+    alertQueue.push(alert);
 
-const ALERT_TYPES = {
-  success: {
-    className: 'alert-success',
-    icon: '✓',
-    title: 'Success'
-  },
-  error: {
-    className: 'alert-error',
-    icon: '✕',
-    title: 'Error'
-  },
-  warning: {
-    className: 'alert-warning',
-    icon: '⚠',
-    title: 'Warning'
-  },
-  info: {
-    className: 'alert-info',
-    icon: 'ℹ',
-    title: 'Info'
-  }
-};
-
-
-let alertContainer = null;
-let currentTimeout = null;
-
-function getAlertContainer() {
-  if (!alertContainer) {
-    alertContainer = document.querySelector('.alert-container') || 
-                    document.querySelector('[data-alert-container]');
-
-    if (!alertContainer) {
-      alertContainer = document.createElement('div');
-      alertContainer.className = 'alert-container';
-      document.body.prepend(alertContainer);
+    if (!isShowingAlert) {
+        displayNextAlert();
     }
-  }
-  return alertContainer;
 }
 
-function createAlert(message, type = 'info', duration = ALERT_DURATION_DEFAULT) {
+function displayNextAlert() {
+    if (alertQueue.length === 0) {
+        isShowingAlert = false;
+        return;
+    }
 
-  hideAlert();
+    isShowingAlert = true;
+    const alert = alertQueue.shift();
 
-  const alert = document.createElement('div');
-  alert.className = `alert-banner ${ALERT_TYPES[type]?.className || 'alert-info'}`;
-  
-  const icon = ALERT_TYPES[type]?.icon || 'ℹ';
-  const title = ALERT_TYPES[type]?.title || 'Notification';
+    const alertContainer = getOrCreateAlertContainer();
+    const alertElement = createAlertElement(alert.message, alert.type);
 
-  alert.innerHTML = `
-    <div class="alert-icon">${icon}</div>
-    <div class="alert-content">
-      <strong>${title}</strong>
-      <p>${message}</p>
-    </div>
-    <button class="alert-close" aria-label="Close">×</button>
+    alertContainer.appendChild(alertElement);
+
+    setTimeout(() => {
+        alertElement.classList.add('show');
+    }, 10);
+
+    if (alert.duration > 0) {
+        setTimeout(() => {
+            hideAlert(alertElement);
+        }, alert.duration);
+    }
+}
+
+function getOrCreateAlertContainer() {
+    let container = document.getElementById('alert-container');
+
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'alert-container';
+        container.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+    `;
+        document.body.appendChild(container);
+    }
+
+    return container;
+}
+
+function createAlertElement(message, type) {
+    const alert = document.createElement('div');
+    alert.className = `alert alert-${type}`;
+
+    // Get icon based on type
+    const icons = {
+        success: '✓',
+        error: '✕',
+        warning: '⚠',
+        info: 'ℹ'
+    };
+
+    const icon = icons[type] || icons.info;
+
+    const colors = {
+        success: {
+            bg: 'linear-gradient(135deg, rgba(56, 239, 125, 0.9) 0%, rgba(17, 153, 142, 0.9) 100%)',
+            border: '#38ef7d'
+        },
+        error: {
+            bg: 'linear-gradient(135deg, rgba(241, 92, 100, 0.9) 0%, rgba(235, 57, 65, 0.9) 100%)',
+            border: '#f15c64'
+        },
+        warning: {
+            bg: 'linear-gradient(135deg, rgba(245, 87, 108, 0.9) 0%, rgba(240, 147, 251, 0.9) 100%)',
+            border: '#f5576c'
+        },
+        info: {
+            bg: 'linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%)',
+            border: '#667eea'
+        }
+    };
+
+    const color = colors[type] || colors.info;
+
+    alert.style.cssText = `
+    padding: 1rem 1.5rem;
+    background: ${color.bg};
+    backdrop-filter: blur(12px);
+    border: 1px solid ${color.border};
+    border-radius: 12px;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+    word-wrap: break-word;
   `;
 
-  getAlertContainer().appendChild(alert);
+    alert.innerHTML = `
+    <span style="font-size: 1.25rem; flex-shrink: 0;">${icon}</span>
+    <span style="flex: 1;">${message}</span>
+    <button onclick="this.parentElement.style.display='none'" style="
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 0;
+      margin-left: 8px;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+      flex-shrink: 0;
+    " onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">×</button>
+  `;
 
-  if (duration > 0) {
-    currentTimeout = setTimeout(() => {
-      hideAlert();
-    }, duration);
-  }
+    alert.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'BUTTON') {
+            hideAlert(alert);
+        }
+    });
 
-  alert.querySelector('.alert-close').addEventListener('click', () => {
-    hideAlert();
-  });
-
-  alert.addEventListener('click', (e) => {
-    if (e.target !== alert.querySelector('.alert-close')) {
-      hideAlert();
-    }
-  });
-
-  return alert;
+    return alert;
 }
