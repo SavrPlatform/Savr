@@ -82,3 +82,84 @@ function createAlert(message, type = 'info', duration = ALERT_DURATION_DEFAULT) 
 
   return alert;
 }
+
+function hideAlert(alertElement) {
+    if (!alertElement) return;
+
+    alertElement.classList.remove('show');
+    alertElement.style.opacity = '0';
+    alertElement.style.transform = 'translateX(100%)';
+
+    setTimeout(() => {
+        if (alertElement.parentElement) {
+            alertElement.parentElement.removeChild(alertElement);
+        }
+        displayNextAlert();
+    }, 300);
+}
+
+function addAlertStyles() {
+    if (document.getElementById('alert-styles')) return;
+
+    const style = document.createElement('style');
+    style.id = 'alert-styles';
+    style.textContent = `
+    .alert.show {
+      opacity: 1 !important;
+      transform: translateX(0) !important;
+    }
+    
+    @media (max-width: 768px) {
+      #alert-container {
+        left: 10px;
+        right: 10px;
+        max-width: none;
+      }
+    }
+  `;
+    document.head.appendChild(style);
+}
+
+function clearAllAlerts() {
+    const container = document.getElementById('alert-container');
+    if (container) {
+        container.innerHTML = '';
+    }
+    alertQueue = [];
+    isShowingAlert = false;
+}
+
+function showSuccess(message) {
+    showAlert(message, 'success');
+}
+
+function showError(message) {
+    showAlert(message, 'error');
+}
+
+function showWarning(message) {
+    showAlert(message, 'warning');
+}
+
+function showInfo(message) {
+    showAlert(message, 'info');
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addAlertStyles);
+} else {
+    addAlertStyles();
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        showAlert,
+        hideAlert,
+        clearAllAlerts,
+        showSuccess,
+        showError,
+        showWarning,
+        showInfo
+    };
+}
+
