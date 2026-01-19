@@ -78,7 +78,7 @@ Frontend
 ├── js/
 │   ├── app.js
 │   ├── budgetCalculator.js
-│   ├── chartRenderer.js
+│   ├── utils.js
 │   ├── uiController.js
 │   └── alertSystem.js
 ├── assets/
@@ -87,15 +87,13 @@ Frontend
 ├── components/
 │   ├── dashboard/
 │   │   ├── summary-cards.html
-│   │   ├── expense-chart.html
 │   │   ├── transaction-list.html
 │   │   └── budget-progress.html
 │   └── ui/
 │       ├── header.html
 │       ├── footer.html
 │       └── alert-banner.html
-└── lib/
-    └── utils.js
+
 ````
 
 ---
