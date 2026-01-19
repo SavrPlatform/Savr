@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Set and track your savings goals">
+    <title>Savings Goals - savr</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div data-include="components/header.html"></div>
+
+    <!-- Goals Section -->
+    <div class="dashboard-container">
+        <!-- Page Header -->
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Savings Goals</h1>
+            <p class="dashboard-subtitle">Track your financial milestones</p>
+        </div>
+
+        <!-- Coming Soon -->
+        <div class="glass-card" style="text-align: center; padding: var(--spacing-3xl);">
+            <div style="font-size: 5rem; margin-bottom: var(--spacing-xl); opacity: 0.7;">🎯</div>
+            <h2 style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-md);">
+                Savings Goals Feature
+            </h2>
+            <p
+                style="color: var(--color-text-secondary); font-size: var(--font-size-lg); max-width: 600px; margin: 0 auto var(--spacing-xl);">
+                We're working hard to bring you powerful savings goal tracking. Set targets, track progress, and
+                celebrate milestones on your financial journey.
+            </p>
+
+            <div class="glass-card"
+                style="max-width: 500px; margin: 0 auto; padding: var(--spacing-xl); background: var(--color-bg-secondary);">
+                <h3 style="margin-bottom: var(--spacing-lg);">Coming Soon:</h3>
+                <ul
+                    style="text-align: left; list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--spacing-md);">
+                    <li style="display: flex; align-items: flex-start; gap: var(--spacing-sm);">
+                        <span style="color: var(--color-success); flex-shrink: 0;">✓</span>
+                        <span style="color: var(--color-text-secondary);">Create multiple savings goals</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: var(--spacing-sm);">
+                        <span style="color: var(--color-success); flex-shrink: 0;">✓</span>
+                        <span style="color: var(--color-text-secondary);">Set target amounts and deadlines</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: var(--spacing-sm);">
+                        <span style="color: var(--color-success); flex-shrink: 0;">✓</span>
+                        <span style="color: var(--color-text-secondary);">Track progress with visual indicators</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: var(--spacing-sm);">
+                        <span style="color: var(--color-success); flex-shrink: 0;">✓</span>
+                        <span style="color: var(--color-text-secondary);">Allocate funds toward specific goals</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: var(--spacing-sm);">
+                        <span style="color: var(--color-success); flex-shrink: 0;">✓</span>
+                        <span style="color: var(--color-text-secondary);">Get milestone notifications</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="margin-top: var(--spacing-2xl);">
+                <a href="dashboard.html" class="btn btn-primary btn-lg">
+                    ← Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div data-include="components/footer.html"></div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/budgetCalculator.js"></script>
+    <script src="js/uiController.js"></script>
+    <script src="js/alertSystem.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
