@@ -1,0 +1,256 @@
+/* 
+   MOBILE FIRST (Default - < 768px)
+    */
+
+@media (min-width: 768px) {
+
+    /* Typography scaling */
+    :root {
+        --font-size-3xl: 2.25rem;
+        /* 36px */
+        --font-size-4xl: 3rem;
+        /* 48px */
+        --font-size-5xl: 3.75rem;
+        /* 60px */
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-xl);
+    }
+
+    /* Grid adjustments */
+    .grid-2-md {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3-md {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 
+   DESKTOP (1024px and above)
+    */
+
+@media (min-width: 1024px) {
+
+    /* Section spacing */
+    .section {
+        padding: 5rem 0;
+    }
+
+    /* Grid stays at defined columns */
+    .grid-3-lg {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4-lg {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 
+   LARGE DESKTOP (1440px and above)
+   */
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* 
+   MOBILE SPECIFIC (< 768px)
+   */
+
+@media (max-width: 767px) {
+
+    /* Typography adjustments */
+    h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    /* Force single column grids */
+    .grid,
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Button adjustments */
+    .btn {
+        padding: 0.875rem 1.25rem;
+        width: 100%;
+    }
+
+    .btn-sm {
+        width: auto;
+    }
+
+    /* Card adjustments */
+    .glass-card {
+        padding: var(--spacing-lg);
+    }
+
+    /* Section spacing */
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    /* Container padding */
+    .container,
+    .container-fluid {
+        padding: 0 var(--spacing-md);
+    }
+
+    /* Text alignment */
+    .text-center-mobile {
+        text-align: center;
+    }
+
+    /* Hide on mobile */
+    .hide-mobile {
+        display: none !important;
+    }
+
+    /* Stack flex items */
+    .flex-col-mobile {
+        flex-direction: column;
+    }
+
+    /* Full width on mobile */
+    .full-width-mobile {
+        width: 100%;
+    }
+}
+
+/* 
+   TABLET SPECIFIC (768px - 1023px)
+    */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Hide on tablet */
+    .hide-tablet {
+        display: none !important;
+    }
+
+    /* 2-column grids for medium screens */
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 
+   DESKTOP SPECIFIC (1024px and above)
+  */
+
+@media (min-width: 1024px) {
+
+    /* Hide on desktop */
+    .hide-desktop {
+        display: none !important;
+    }
+
+    /* Show only on desktop */
+    .show-desktop {
+        display: block !important;
+    }
+}
+
+/*   PRINT STYLES
+    */
+
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .glass-card {
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+
+    .btn,
+    nav,
+    footer,
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* 
+   REDUCED MOTION
+ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*
+   HIGH CONTRAST MODE
+    */
+
+@media (prefers-contrast: high) {
+    :root {
+        --color-glass-border: rgba(255, 255, 255, 0.3);
+    }
+
+    .glass-card {
+        border-width: 2px;
+    }
+
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* 
+   TOUCH DEVICE OPTIMIZATIONS
+ */
+
+@media (hover: none) and (pointer: coarse) {
+
+    /* Larger touch targets */
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Remove hover effects on touch devices */
+    .glass-card:hover {
+        transform: none;
+    }
+
+    .btn:hover::before {
+        width: 0;
+        height: 0;
+    }
+}
