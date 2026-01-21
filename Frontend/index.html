@@ -4,28 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Savr – Student Budget Tracker</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/dashboard.css">
-  <link rel="stylesheet" href="/css/responsive.css">
-  <link rel="stylesheet" href="/css/forms.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-  <!-- Header -->
   <div data-include="components/header.html"></div>
 
   <main class="container">
-    <section class="hero">
-      <h1>Welcome to Savr</h1>
-      <p>Smart, simple budget tracking for university students</p>
-      <div class="cta-buttons">
-        <a href="login.html" class="btn primary">Login</a>
-        <a href="register.html" class="btn outline">Register</a>
+    <section class="section hero text-center">
+      <h1 class="gradient-text animate-fade-in-up">
+        Welcome to Savr
+      </h1>
+      <p class="animate-fade-in-up" style="font-size: var(--font-size-lg); color: var(--text-secondary); max-width: 600px; margin: var(--spacing-xl) auto 0;">
+        Smart, simple budget tracking for university students
+      </p>
+      <div class="flex justify-center gap-6 mt-10 flex-wrap">
+        <a href="login.html" class="btn btn-primary btn-large">Login</a>
+        <a href="register.html" class="btn btn-outline btn-large">Register</a>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <div data-include="components/footer.html"></div>
 
   <script src="js/utils.js"></script>

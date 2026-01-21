@@ -1,65 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Login to your savr account">
     <title>Login - savr</title>
-
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/forms.css">
 </head>
-
 <body>
-    <!-- Header -->
     <div data-include="components/header.html"></div>
 
-    <!-- Login Section -->
-    <section class="section"
-        style="min-height: calc(100vh - 200px); display: flex; align-items: center; justify-content: center;">
+    <section class="section min-h-[calc(100vh-200px)] flex items-center justify-center">
         <div class="container">
-            <div style="max-width: 500px; margin: 0 auto;">
-                <div class="glass-card animate-fade-in-up">
-                    <div style="text-align: center; margin-bottom: var(--spacing-2xl);">
-                        <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">💰</div>
-                        <h1 style="font-size: var(--font-size-3xl); margin-bottom: var(--spacing-sm);">Welcome Back</h1>
-                        <p style="color: var(--color-text-secondary);">Login to your savr account</p>
+            <div class="max-w-md mx-auto">
+                <div class="glass-card animate-fade-in-up text-center">
+                    <div class="mb-10">
+                        <div class="text-5xl mb-4">💰</div>
+                        <h1 class="text-3xl font-bold mb-2">Welcome Back</h1>
+                        <p class="text-text-secondary">Login to your savr account</p>
                     </div>
 
                     <form id="login-form" class="form">
                         <div class="form-group">
                             <label for="email" class="form-label required">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com"
-                                required autocomplete="email">
+                            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required autocomplete="email">
                         </div>
 
                         <div class="form-group">
                             <label for="password" class="form-label required">Password</label>
-                            <input type="password" id="password" name="password" class="form-input"
-                                placeholder="Enter your password" required autocomplete="current-password"
-                                minlength="6">
-                            <div class="form-text">Demo: Use any email and password (min 6 characters)</div>
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password" minlength="6">
+                            <div class="form-text mt-1">Demo: Use any email and password (min 6 characters)</div>
                         </div>
 
-                        <div class="form-check">
+                        <div class="form-check mt-4">
                             <input type="checkbox" id="remember" name="remember" class="form-check-input">
                             <label for="remember" class="form-check-label">Remember me</label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block btn-lg">
+                        <button type="submit" class="btn btn-primary btn-large btn-block mt-8">
                             Login
                         </button>
                     </form>
 
-                    <div
-                        style="text-align: center; margin-top: var(--spacing-xl); padding-top: var(--spacing-xl); border-top: 1px solid var(--color-glass-border);">
-                        <p style="color: var(--color-text-secondary);">
-                            Don't have an account?
-                            <a href="register.html"
-                                style="color: var(--color-primary); font-weight: var(--font-weight-medium);">Sign up</a>
+                    <div class="mt-10 pt-8 border-t border-border text-center">
+                        <p class="text-text-secondary">
+                            Don't have an account? 
+                            <a href="register.html" class="text-primary font-medium hover:underline">Sign up</a>
                         </p>
                     </div>
                 </div>
@@ -67,15 +55,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <div data-include="components/footer.html"></div>
 
-    <!-- Scripts -->
     <script src="js/utils.js"></script>
     <script src="js/budgetCalculator.js"></script>
     <script src="js/uiController.js"></script>
     <script src="js/alertSystem.js"></script>
     <script src="js/app.js"></script>
 </body>
-
 </html>

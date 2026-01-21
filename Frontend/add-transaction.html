@@ -4,130 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Add Transaction • Savr</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/forms.css">
-  <link rel="stylesheet" href="/css/dashboard.css"> <!-- reusing some dashboard colors -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
 
-<!-- Header -->
-<div data-include="/components/header.html"></div>
+  <div data-include="../components/header.html"></div>
 
-<main class="container">
-
-  <section class="page-header">
-    <h1>Add New Transaction</h1>
-    <p>Record your income or spending quickly</p>
-  </section>
-
-  <!-- Alert placeholder -->
-  <div data-include="../components/alert-banner.html"></div>
-
-  <div class="card form-card">
-    <form id="addTransactionForm" class="transaction-form">
-
-      <!-- Transaction Type -->
-      <div class="form-group">
-        <label class="form-label">Transaction Type</label>
-        <div class="radio-group">
-          <label class="radio-label">
-            <input type="radio" name="type" value="income" checked>
-            <span class="radio-custom income">Income</span>
-          </label>
-          
-          <label class="radio-label">
-            <input type="radio" name="type" value="expense">
-            <span class="radio-custom expense">Expense</span>
-          </label>
-        </div>
+  <main class="container">
+    <section class="section">
+      <div class="text-center mb-10">
+        <h1 class="text-3xl font-bold">Add New Transaction</h1>
+        <p class="text-text-secondary mt-2">Record your income or spending quickly</p>
       </div>
 
-      <!-- Category -->
-      <div class="form-group">
-        <label for="category" class="form-label">Category <span class="required">*</span></label>
-        <select id="category" name="category" required>
-          <option value="">-- Select category --</option>
-          
-          <optgroup label="Income">
-            <option value="Allowance">Pocket Money / Allowance</option>
-            <option value="Part-time">Part-time Job</option>
-            <option value="Freelance">Freelance / Project</option>
-            <option value="Gift">Gift / Support</option>
-            <option value="Other-income">Other Income</option>
-          </optgroup>
-          
-          <optgroup label="Expenses">
-            <option value="Food">Food & Drinks</option>
-            <option value="Transport">Transport (Taxi/Bajaj/Bus)</option>
-            <option value="Mobile">Mobile & Internet</option>
-            <option value="Print">Print & Photocopy</option>
-            <option value="Stationery">Books & Stationery</option>
-            <option value="Entertainment">Entertainment / Going Out</option>
-            <option value="Clothes">Clothes & Accessories</option>
-            <option value="House">Rent / Dorm Contribution</option>
-            <option value="Health">Health / Medicine</option>
-            <option value="Other">Other Expense</option>
-          </optgroup>
-        </select>
+      <div data-include="../components/alert-banner.html"></div>
+
+      <div class="glass-card mx-auto max-w-xl">
+        <form id="addTransactionForm" class="form">
+
+          <div class="form-group">
+            <label class="form-label">Transaction Type</label>
+            <div class="flex gap-4 flex-wrap">
+              <label class="radio-label cursor-pointer">
+                <input type="radio" name="type" value="income" checked>
+                <span class="radio-custom income px-6 py-3 rounded-lg border-2 border-transparent font-medium">Income</span>
+              </label>
+              <label class="radio-label cursor-pointer">
+                <input type="radio" name="type" value="expense">
+                <span class="radio-custom expense px-6 py-3 rounded-lg border-2 border-transparent font-medium">Expense</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="category" class="form-label required">Category</label>
+            <select id="category" name="category" class="form-select" required>
+              <option value="">-- Select category --</option>
+              <optgroup label="Income">
+                <option value="Allowance">Pocket Money / Allowance</option>
+                <option value="Part-time">Part-time Job</option>
+                <option value="Freelance">Freelance / Project</option>
+                <option value="Gift">Gift / Support</option>
+                <option value="Other-income">Other Income</option>
+              </optgroup>
+              <optgroup label="Expenses">
+                <option value="Food">Food & Drinks</option>
+                <option value="Transport">Transport (Taxi/Bajaj/Bus)</option>
+                <option value="Mobile">Mobile & Internet</option>
+                <option value="Print">Print & Photocopy</option>
+                <option value="Stationery">Books & Stationery</option>
+                <option value="Entertainment">Entertainment / Going Out</option>
+                <option value="Clothes">Clothes & Accessories</option>
+                <option value="House">Rent / Dorm Contribution</option>
+                <option value="Health">Health / Medicine</option>
+                <option value="Other">Other Expense</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="amount" class="form-label required">Amount (ETB)</label>
+            <input type="number" id="amount" name="amount" step="0.01" min="0.01" required placeholder="e.g. 1250.50" class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" id="date" name="date" class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label for="description" class="form-label">Description / Note</label>
+            <textarea id="description" name="description" rows="3" placeholder="e.g. Monthly allowance from family • Coffee with friends • Printing project materials" class="form-textarea"></textarea>
+          </div>
+
+          <div class="form-actions mt-10">
+            <button type="submit" class="btn btn-primary btn-large">Save Transaction</button>
+            <a href="dashboard.html" class="btn btn-outline btn-large">Cancel</a>
+          </div>
+
+        </form>
       </div>
+    </section>
+  </main>
 
-      <!-- Amount -->
-      <div class="form-group">
-        <label for="amount" class="form-label">Amount (ETB) <span class="required">*</span></label>
-        <input 
-          type="number" 
-          id="amount" 
-          name="amount" 
-          step="0.01" 
-          min="0.01" 
-          required 
-          placeholder="e.g. 1250.50"
-          class="form-input"
-        >
-      </div>
+  <div data-include="../components/footer.html"></div>
 
-      <!-- Date  -->
-      <div class="form-group">
-        <label for="date" class="form-label">Date</label>
-        <input 
-          type="date" 
-          id="date" 
-          name="date" 
-          value=""
-          class="form-input"
-        >
-      </div>
-
-      <!-- Description -->
-      <div class="form-group">
-        <label for="description" class="form-label">Description / Note</label>
-        <textarea 
-          id="description" 
-          name="description" 
-          rows="3" 
-          placeholder="e.g. Monthly allowance from family • Coffee with friends • Printing project materials"
-          class="form-input"
-        ></textarea>
-      </div>
-
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary btn-large">Save Transaction</button>
-        <a href="dashboard.html" class="btn btn-outline">Cancel</a>
-      </div>
-
-    </form>
-  </div>
-
-</main>
-
-<!-- Footer -->
-<div data-include="/components/footer.html"></div>
-
-<script src="/js/utils.js"></script>
-<script src="/js/budgetCalculator.js"></script>
-<script src="/js/uiController.js"></script>
-<script src="/js/alertSystem.js"></script>
-<script src="/js/app.js"></script>
-
+  <script src="../js/utils.js"></script>
+  <script src="../js/budgetCalculator.js"></script>
+  <script src="../js/uiController.js"></script>
+  <script src="../js/alertSystem.js"></script>
+  <script src="../js/app.js"></script>
 </body>
 </html>

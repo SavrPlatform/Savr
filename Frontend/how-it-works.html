@@ -1,206 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Learn how savr helps you track expenses, manage budgets, and achieve financial goals">
+    <meta name="description" content="Learn how savr helps you track expenses, manage budgets, and achieve financial goals">
     <title>How It Works - savr</title>
-
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
-    <!-- Header -->
     <div data-include="components/header.html"></div>
 
-    <!-- Hero -->
-    <section class="section" style="padding-top: var(--spacing-3xl);">
+    <section class="section text-center">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h1 class="animate-fade-in-up"
-                    style="font-size: var(--font-size-4xl); margin-bottom: var(--spacing-lg);">
-                    Simple, Powerful
-                    <span
-                        style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Financial
-                        Management</span>
-                </h1>
-                <p class="animate-fade-in-up"
-                    style="font-size: var(--font-size-lg); color: var(--color-text-secondary);">
-                    Managing your money shouldn't be rocket science. Here's how savr makes it effortless.
-                </p>
+            <h1 class="gradient-text animate-fade-in-up" style="max-width: 900px; margin: 0 auto var(--spacing-2xl);">
+                Simple, Powerful Financial Management
+            </h1>
+            <p class="animate-fade-in-up text-lg text-text-secondary max-w-3xl mx-auto">
+                Managing your money shouldn't be rocket science. Here's how savr makes it effortless.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="space-y-12">
+                <div class="glass-card grid md:grid-cols-[100px_1fr] gap-10 items-center">
+                    <div class="step-number" style="background: var(--gradient-primary);">1</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Create Your Account</h3>
+                        <p class="text-text-secondary mb-3">
+                            Sign up in seconds with just your name and email. No credit card required, no lengthy forms, no hassle.
+                        </p>
+                        <p class="text-sm text-text-muted">
+                            💡 <strong>Tip:</strong> Your data is stored locally on your device for maximum privacy and security.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card grid md:grid-cols-[100px_1fr] gap-10 items-center">
+                    <div class="step-number" style="background: var(--gradient-success);">2</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Add Your Transactions</h3>
+                        <p class="text-text-secondary mb-3">
+                            Log your income and expenses as they happen. Categorize each transaction (food, transport, bills, etc.) to see where your money goes.
+                        </p>
+                        <p class="text-sm text-text-muted">
+                            💡 <strong>Tip:</strong> Add transactions daily to maintain accurate records and stay on top of your spending.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card grid md:grid-cols-[100px_1fr] gap-10 items-center">
+                    <div class="step-number" style="background: var(--gradient-info);">3</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Track Your Budget</h3>
+                        <p class="text-text-secondary mb-3">
+                            Set monthly budgets for different categories. savr automatically calculates your spending and shows you exactly how much you have left.
+                        </p>
+                        <p class="text-sm text-text-muted">
+                            💡 <strong>Tip:</strong> Visual progress bars make it easy to see if you're on track or overspending.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card grid md:grid-cols-[100px_1fr] gap-10 items-center">
+                    <div class="step-number" style="background: var(--gradient-warning);">4</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Achieve Your Goals</h3>
+                        <p class="text-text-secondary mb-3">
+                            View your financial overview at a glance. See your total income, expenses, and balance. Make informed decisions about your money.
+                        </p>
+                        <p class="text-sm text-text-muted">
+                            💡 <strong>Tip:</strong> Review your dashboard weekly to stay aware of your financial health.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Steps -->
     <section class="section">
         <div class="container">
-            <div style="display: flex; flex-direction: column; gap: var(--spacing-3xl);">
-
-                <!-- Step 1 -->
-                <div class="glass-card"
-                    style="display: grid; grid-template-columns: 100px 1fr; gap: var(--spacing-xl); align-items: center;">
-                    <div
-                        style="width: 80px; height: 80px; background: var(--gradient-primary); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: white; box-shadow: var(--shadow-lg);">
-                        1
-                    </div>
-                    <div>
-                        <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-md);">Create Your
-                            Account</h3>
-                        <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-md);">
-                            Sign up in seconds with just your name and email. No credit card required, no lengthy forms,
-                            no hassle.
-                        </p>
-                        <p style="color: var(--color-text-muted); font-size: var(--font-size-sm); margin: 0;">
-                            💡 <strong>Tip:</strong> Your data is stored locally on your device for maximum privacy and
-                            security.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="glass-card"
-                    style="display: grid; grid-template-columns: 100px 1fr; gap: var(--spacing-xl); align-items: center;">
-                    <div
-                        style="width: 80px; height: 80px; background: var(--gradient-success); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: white; box-shadow: var(--shadow-lg);">
-                        2
-                    </div>
-                    <div>
-                        <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-md);">Add Your
-                            Transactions</h3>
-                        <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-md);">
-                            Log your income and expenses as they happen. Categorize each transaction (food, transport,
-                            bills, etc.) to see where your money goes.
-                        </p>
-                        <p style="color: var(--color-text-muted); font-size: var(--font-size-sm); margin: 0;">
-                            💡 <strong>Tip:</strong> Add transactions daily to maintain accurate records and stay on top
-                            of your spending.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="glass-card"
-                    style="display: grid; grid-template-columns: 100px 1fr; gap: var(--spacing-xl); align-items: center;">
-                    <div
-                        style="width: 80px; height: 80px; background: var(--gradient-info); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: white; box-shadow: var(--shadow-lg);">
-                        3
-                    </div>
-                    <div>
-                        <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-md);">Track Your Budget
-                        </h3>
-                        <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-md);">
-                            Set monthly budgets for different categories. savr automatically calculates your spending
-                            and shows you exactly how much you have left.
-                        </p>
-                        <p style="color: var(--color-text-muted); font-size: var(--font-size-sm); margin: 0;">
-                            💡 <strong>Tip:</strong> Visual progress bars make it easy to see if you're on track or
-                            overspending.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="glass-card"
-                    style="display: grid; grid-template-columns: 100px 1fr; gap: var(--spacing-xl); align-items: center;">
-                    <div
-                        style="width: 80px; height: 80px; background: var(--gradient-warning); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: white; box-shadow: var(--shadow-lg);">
-                        4
-                    </div>
-                    <div>
-                        <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-md);">Achieve Your
-                            Goals</h3>
-                        <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-md);">
-                            View your financial overview at a glance. See your total income, expenses, and balance. Make
-                            informed decisions about your money.
-                        </p>
-                        <p style="color: var(--color-text-muted); font-size: var(--font-size-sm); margin: 0;">
-                            💡 <strong>Tip:</strong> Review your dashboard weekly to stay aware of your financial
-                            health.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center" style="margin-bottom: var(--spacing-2xl);">
-                Powerful Features, Zero Complexity
-            </h2>
-
+            <h2 class="text-center mb-12">Powerful Features, Zero Complexity</h2>
             <div class="grid grid-2">
-                <div class="glass-card">
-                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">📊</div>
-                    <h3 style="margin-bottom: var(--spacing-md);">Real-Time Insights</h3>
-                    <p style="color: var(--color-text-secondary); margin: 0;">
-                        View your financial health at a glance with animated summary cards showing income, expenses, and
-                        balance in real-time.
-                    </p>
+                <div class="glass-card text-center">
+                    <div class="text-5xl mb-6">📊</div>
+                    <h3 class="text-xl font-bold mb-4">Real-Time Insights</h3>
+                    <p class="text-text-secondary">View your financial health at a glance with animated summary cards showing income, expenses, and balance in real-time.</p>
                 </div>
 
-                <div class="glass-card">
-                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">🏷️</div>
-                    <h3 style="margin-bottom: var(--spacing-md);">Smart Categorization</h3>
-                    <p style="color: var(--color-text-secondary); margin: 0;">
-                        Organize transactions by category (food, transport, shopping, etc.) to understand your spending
-                        patterns.
-                    </p>
+                <div class="glass-card text-center">
+                    <div class="text-5xl mb-6">🏷️</div>
+                    <h3 class="text-xl font-bold mb-4">Smart Categorization</h3>
+                    <p class="text-text-secondary">Organize transactions by category (food, transport, shopping, etc.) to understand your spending patterns.</p>
                 </div>
 
-                <div class="glass-card">
-                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">📈</div>
-                    <h3 style="margin-bottom: var(--spacing-md);">Budget Progress</h3>
-                    <p style="color: var(--color-text-secondary); margin: 0;">
-                        Visual progress bars show how much you've spent versus your budget for each category. Stay on
-                        track effortlessly.
-                    </p>
+                <div class="glass-card text-center">
+                    <div class="text-5xl mb-6">📈</div>
+                    <h3 class="text-xl font-bold mb-4">Budget Progress</h3>
+                    <p class="text-text-secondary">Visual progress bars show how much you've spent versus your budget for each category. Stay on track effortlessly.</p>
                 </div>
 
-                <div class="glass-card">
-                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">⚡</div>
-                    <h3 style="margin-bottom: var(--spacing-md);">Lightning Fast</h3>
-                    <p style="color: var(--color-text-secondary); margin: 0;">
-                        No loading screens, no lag. Everything happens instantly because your data stays on your device.
-                    </p>
+                <div class="glass-card text-center">
+                    <div class="text-5xl mb-6">⚡</div>
+                    <h3 class="text-xl font-bold mb-4">Lightning Fast</h3>
+                    <p class="text-text-secondary">No loading screens, no lag. Everything happens instantly because your data stays on your device.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="section">
         <div class="container">
-            <div class="glass-card" style="text-align: center; padding: var(--spacing-3xl);">
-                <h2 style="margin-bottom: var(--spacing-md);">Ready to Get Started?</h2>
-                <p
-                    style="font-size: var(--font-size-lg); color: var(--color-text-secondary); margin-bottom: var(--spacing-xl);">
+            <div class="glass-card text-center">
+                <h2 class="mb-6">Ready to Get Started?</h2>
+                <p class="text-lg text-text-secondary mb-10 max-w-xl mx-auto">
                     Join savr today and take the first step toward financial freedom.
                 </p>
-                <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
-                    <a href="register.html" class="btn btn-primary btn-lg">Create Free Account</a>
-                    <a href="about.html" class="btn btn-outline btn-lg">Learn More About Us</a>
+                <div class="flex justify-center gap-6 flex-wrap">
+                    <a href="register.html" class="btn btn-primary btn-large">Create Free Account</a>
+                    <a href="about.html" class="btn btn-outline btn-large">Learn More About Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <div data-include="components/footer.html"></div>
 
-    <!-- Scripts -->
     <script src="js/utils.js"></script>
     <script src="js/budgetCalculator.js"></script>
     <script src="js/uiController.js"></script>
     <script src="js/alertSystem.js"></script>
     <script src="js/app.js"></script>
 </body>
-
 </html>

@@ -1,56 +1,58 @@
+/* ==========================================================================
+   SAVR – Dashboard Specific Styles (dashboard.css)
+   ========================================================================== */
+
 .dashboard-container {
-  padding-top: 1rem;
+  padding-top: var(--spacing-xl);
+}
+
+.page-title {
+  font-size: var(--font-size-3xl);
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
 }
 
 .summary-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
 }
 
-.summary-cards .card {
+.summary-card {
   text-align: center;
-  padding: 1.8rem 1rem;
+  padding: var(--spacing-2xl);
 }
 
-.summary-cards h3 {
-  color: var(--gray);
-  font-size: 0.95rem;
-  margin-bottom: 0.6rem;
+.summary-card .label {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
   font-weight: 500;
+  margin-bottom: var(--spacing-sm);
 }
 
-.summary-cards .amount {
-  font-size: 2.1rem;
-  font-weight: 700;
-  margin: 0.4rem 0;
+.summary-card .amount {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
 }
 
-.income-card .amount { color: var(--success); }
-.expense-card .amount { color: var(--danger); }
-.balance-card .amount.positive { color: var(--success); }
-.balance-card .amount.negative { color: var(--danger); }
+.income .amount { color: var(--success); }
+.expense .amount { color: var(--danger); }
+.balance .amount.positive { color: var(--success); }
+.balance .amount.negative { color: var(--danger); }
 
 .quick-actions {
-  text-align: center;
-  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  margin: var(--spacing-2xl) 0;
 }
 
-.quick-actions .btn {
-  font-size: 1.1rem;
-  padding: 1rem 2rem;
-  margin: 0 0.8rem;
-}
-.transactions-section h2 {
-  margin: 2rem 0 1.2rem;
-  font-size: 1.4rem;
-}
-
-.transaction-list {
-  background: white;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+.transaction-list-container {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
   overflow: hidden;
 }
 
@@ -58,102 +60,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.1rem 1.5rem;
-  border-bottom: 1px solid #eee;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-bottom: 1px solid var(--border);
 }
 
 .transaction-item:last-child {
   border-bottom: none;
 }
 
-.transaction-info {
-  flex: 1;
-}
-
-.transaction-info strong {
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.transaction-info .date {
-  color: var(--gray);
-  font-size: 0.85rem;
-}
-
 .transaction-amount {
-  font-weight: bold;
-  min-width: 110px;
+  font-weight: 700;
+  min-width: 100px;
   text-align: right;
-  font-size: 1.1rem;
-}
-
-.income { color: var(--success); }
-.expense { color: var(--danger); }
-
-.delete-btn {
-  background: #ff4757;
-  color: white;
-  border: none;
-  padding: 0.4rem 0.9rem;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-left: 1rem;
-  font-size: 0.85rem;
-}
-
-.delete-btn:hover {
-  background: #e84118;
 }
 
 .empty-state {
+  padding: var(--spacing-3xl);
   text-align: center;
-  padding: 3rem 1rem;
-  color: var(--gray);
+  color: var(--text-muted);
   font-style: italic;
-}
-
-.dashboard-container {
-  padding-top: 1.5rem;
-}
-
-.page-title {
-  font-size: 1.9rem;
-  margin-bottom: 1.8rem;
-  text-align: center;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2.5rem 0 1.3rem;
-}
-
-.section-header h2 {
-  font-size: 1.45rem;
-}
-
-.see-all {
-  color: var(--primary);
-  font-weight: 500;
-  font-size: 0.95rem;
-  text-decoration: none;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-}
-
-.btn-secondary:hover {
-  background-color: var(--primary);
-  color: white;
-}
-
-.transaction-list-container {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
